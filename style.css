@@ -46,12 +46,6 @@ body {
     font-size: 1.8rem;
 }
 
-.welcome-box p {
-    margin-bottom: 25px;
-    font-size: 1rem;
-    color: #ccc;
-}
-
 .start-btn {
     background: #d4af37;
     color: #000;
