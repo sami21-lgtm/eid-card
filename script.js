@@ -1,7 +1,7 @@
 // আপনার গিটহাবের ফাইল অনুযায়ী .mp3.mp3 নাম দিয়ে ফিক্সড করা অবজেক্ট
 const animalData = {
     sheep: {
-        audioFile: "voice_preview_sheep.mp3.mp3"
+        audioFile: "voice_preview_sheep.mp3 (1).mp3"
     },
     camel: {
         audioFile: "voice_preview_camel.mp3.mp3"
