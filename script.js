@@ -1,4 +1,4 @@
-// আপনার গিটহাবের ফাইল অনুযায়ী .mp3.mp3 নাম দিয়ে ফিক্সড করা অবজেক্ট
+// আপনার বর্তমান ডাউনলোডের নাম অনুযায়ী অবজেক্ট সেট করা হলো
 const animalData = {
     sheep: {
         audioFile: "voice_preview_sheep.mp3 (1).mp3"
@@ -45,16 +45,15 @@ function interact(animalType, elementClass, event) {
         element.classList.add('shake-anim');
     }
 
-    // আগের কোনো পশুর ভয়েস চলতে থাকলে তা স্টপ করা
+    // আগের কোনো পশুর ভয়েস বন্ধ করা
     if (currentAnimalAudio) {
         currentAnimalAudio.pause();
         currentAnimalAudio.currentTime = 0;
     }
 
-    // ব্যাকগ্রাউন্ড মিউজিকের ভলিউম হালকা কমানো (Ducking)
     bgMusic.volume = 0.08;
 
-    // অডিও লোড ও প্লে
+    // অডিও প্লে
     currentAnimalAudio = new Audio(animalData[animalType].audioFile);
     currentAnimalAudio.volume = 1.0;
     
@@ -62,7 +61,6 @@ function interact(animalType, elementClass, event) {
         console.log("Audio play blocked or failed: ", error); 
     });
 
-    // পশুর ডাক শেষ হলে ব্যাকগ্রাউন্ড মিউজিক আবার স্বাভাবিক ৩০% ভলিউমে যাবে
     currentAnimalAudio.onended = () => { 
         bgMusic.volume = 0.3; 
     };
