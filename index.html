@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid ul Adha - Interactive Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="bgMusic" src="u_mr84lzw2xf-eid-mubarak-201252.mp3" loop muted></audio>
+
+    <div class="welcome-overlay" id="welcomeOverlay" onclick="startExperience()">
+        <div class="welcome-box">
+            <h2>🕌 Eid ul Adha Mubarak!</h2>
+            <button class="start-btn">Open Card ✨</button>
+        </div>
+    </div>
+
+    <div class="eid-card" id="mainCard">
+        <div class="animal-hotspot camel-left" onclick="interact('camel', 'camel-left', event)"></div>
+        <div class="animal-hotspot cow-left" onclick="interact('cow', 'cow-left', event)"></div>
+        <div class="animal-hotspot sheep-left" onclick="interact('sheep', 'sheep-left', event)"></div>
+
+        <div class="animal-hotspot camel-right" onclick="interact('camel', 'camel-right', event)"></div>
+        <div class="animal-hotspot cow-right" onclick="interact('cow', 'cow-right', event)"></div>
+        <div class="animal-hotspot sheep-right" onclick="interact('sheep', 'sheep-right', event)"></div>
+
+        <div class="instruction">Tap any animal on screen for Voice! 🐐 🐪 🐄</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
