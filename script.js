@@ -7,7 +7,7 @@ const animalData = {
         audioFile: "voice_preview_camel.mp3 (2).mp3"
     },
     cow: {
-        audioFile: "voice_preview_cow.mp3.mp3"
+        audioFile: ""
     }
 };
 
