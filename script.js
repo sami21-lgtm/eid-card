@@ -4,7 +4,7 @@ const animalData = {
         audioFile: "voice_preview_sheep.mp3 (1).mp3"
     },
     camel: {
-        audioFile: "camel.mp3" // গিটহাবের নতুন নাম অনুযায়ী সেট করা হলো
+        audioFile: "voice_preview_camel.mp3 (3).mp3" // গিটহাবের নতুন নাম অনুযায়ী সেট করা হলো
     },
     cow: {
         audioFile: "voice_preview_cow.mp3 (2).mp3"
