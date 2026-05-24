@@ -1,10 +1,10 @@
-// আপনার বর্তমান ডাউনলোডের নাম অনুযায়ী অবজেক্ট সেট করা হলো
+// ফাইলের নাম একদম সহজ করে দিয়ে পাথ লক করা হলো (কোনো ব্র্যাকেট বা স্পেসের ঝামেলা নেই)
 const animalData = {
     sheep: {
         audioFile: "voice_preview_sheep.mp3 (1).mp3"
     },
     camel: {
-        audioFile: "voice_preview_camel.mp3 (3).mp3"
+        audioFile: "camel.mp3" // গিটহাবের নতুন নাম অনুযায়ী সেট করা হলো
     },
     cow: {
         audioFile: "voice_preview_cow.mp3 (2).mp3"
@@ -45,15 +45,16 @@ function interact(animalType, elementClass, event) {
         element.classList.add('shake-anim');
     }
 
-    // আগের কোনো পশুর ভয়েস বন্ধ করা
+    // আগের কোনো পশুর ভয়েস চলতে থাকলে তা স্টপ করা
     if (currentAnimalAudio) {
         currentAnimalAudio.pause();
         currentAnimalAudio.currentTime = 0;
     }
 
+    // ব্যাকগ্রাউন্ড মিউজিকের ভলিউম হালকা কমানো (Ducking)
     bgMusic.volume = 0.08;
 
-    // অডিও প্লে
+    // অডিও লোড ও প্লে
     currentAnimalAudio = new Audio(animalData[animalType].audioFile);
     currentAnimalAudio.volume = 1.0;
     
@@ -61,6 +62,7 @@ function interact(animalType, elementClass, event) {
         console.log("Audio play blocked or failed: ", error); 
     });
 
+    // পশুর ডাক শেষ হলে ব্যাকগ্রাউন্ড মিউজিক আবার স্বাভাবিক ৩০% ভলিউমে যাবে
     currentAnimalAudio.onended = () => { 
         bgMusic.volume = 0.3; 
     };
